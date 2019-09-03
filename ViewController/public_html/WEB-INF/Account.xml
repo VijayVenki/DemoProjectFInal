@@ -31,7 +31,7 @@
     <control-flow-rule id="__2">
       <from-activity-id>CreateAccount</from-activity-id>
       <control-flow-case id="__3">
-        <from-outcome>gobaclk</from-outcome>
+        <from-outcome>back</from-outcome>
         <to-activity-id>SearchAccount</to-activity-id>
       </control-flow-case>
     </control-flow-rule>

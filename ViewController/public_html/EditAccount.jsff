@@ -7,6 +7,11 @@
       <af:panelBox text="EDIT ACCOUNT" id="pb1">
     <f:facet name="toolbar">
     </f:facet>
+    <af:button actionListener="#{bindings.Commit.execute}" text="Save" disabled=""
+                     id="b1" action="back"/> <af:button actionListener="#{bindings.Rollback.execute}" text="Reset"
+                     disabled="" immediate="true" id="b2" action="back">
+            <af:resetActionListener/>
+          </af:button>
     <af:panelFormLayout id="pfl1">
       <af:inputText value="#{bindings.AccountName.inputValue}" label="#{bindings.AccountName.hints.label}"
                     required="#{bindings.AccountName.hints.mandatory}"
@@ -84,13 +89,7 @@
         <f:validator binding="#{bindings.PrimaryContact1.validator}"/>
       </af:inputComboboxListOfValues>
     </af:panelFormLayout>
-          <af:button actionListener="#{bindings.Commit.execute}" disabled=""
-                     id="b1" action="back" icon="#{resource['images:icons8-save-24.png']}"/>
-          <af:button actionListener="#{bindings.Rollback.execute}"
-                     disabled="" immediate="true" id="b2"
-                     icon="#{resource['images:icons8-cancel-24.png']}" action="back">
-            <af:resetActionListener/>
-          </af:button>
+          
         </af:panelBox>
       </af:gridCell>
       <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc2">

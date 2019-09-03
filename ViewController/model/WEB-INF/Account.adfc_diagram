@@ -81,8 +81,8 @@
       from="View7"
       to="View2">
       <property
-         name="fromOutcome">gobaclk</property>
+         name="fromOutcome">back</property>
       <property
-         name="sdm:polyPoints">L56,343.03204,124.28145,58.90689,148.67578,R50</property>
+         name="sdm:polyPoints">L54,344.5127,122.80078,57.356663,152.17578,R54</property>
    </ControlFlowCase>
 </SDM>

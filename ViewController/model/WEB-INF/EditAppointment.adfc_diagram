@@ -15,7 +15,7 @@
       <property
          name="description">&lt;html>&lt;p>&lt;b>EditAppointment1&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">137.8711</property>
+         name="y">137.60547</property>
       <property
          name="page">/EditAppointment.jsff</property>
       <property
@@ -55,7 +55,7 @@
       <property
          name="fromOutcome">contact</property>
       <property
-         name="sdm:polyPoints">R46,380.0,134.30469,574.0,56.66797,L50</property>
+         name="sdm:polyPoints">R42,380.0,130.53906,574.0,56.66797,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -65,7 +65,7 @@
       <property
          name="fromOutcome">user</property>
       <property
-         name="sdm:polyPoints">R54,380.0,141.30469,559.0,170.66797,L50</property>
+         name="sdm:polyPoints">R50,381.62567,137.53906,559.0,170.66797,L50</property>
    </ControlFlowCase>
    <TaskFlowReturn
       id="TaskFlowReturn10">
@@ -90,6 +90,6 @@
       <property
          name="fromOutcome">back</property>
       <property
-         name="sdm:polyPoints">L22,L14</property>
+         name="sdm:polyPoints">R58,380.0,144.53906,588.0,324.60156,L50</property>
    </ControlFlowCase>
 </SDM>

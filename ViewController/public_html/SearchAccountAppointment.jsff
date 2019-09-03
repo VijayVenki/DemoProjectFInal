@@ -3,10 +3,10 @@
                 xmlns:f="http://java.sun.com/jsf/core">
   <af:panelGroupLayout layout="vertical" id="pgl1">
     <af:panelHeader text="Appointment" id="ph1">
-      <af:button id="b1" icon="#{resource['images:icons8-create-24.png']}"
+      <af:button id="b1"
                  actionListener="#{bindings.CreateInsert.execute}" disabled="#{!bindings.CreateInsert.enabled}"
-                 action="create"/>
-      <af:button id="b2" icon="#{resource['images:icons8-back-26.png']}" action="back"/>
+                 action="create" text="Create"/>
+      <af:button id="b2" action="back" text="back"/>
       <af:query id="qryId1" headerText="Search" disclosed="true"
                 value="#{bindings.AppointmentSearchQuery1.queryDescriptor}"
                 model="#{bindings.AppointmentSearchQuery1.queryModel}"
@@ -20,7 +20,8 @@
               selectionListener="#{bindings.AppointmentVO31.collectionModel.makeCurrent}" rowSelection="single"
               fetchSize="#{bindings.AppointmentVO31.rangeSize}"
               filterModel="#{bindings.AppointmentSearchQuery1.queryDescriptor}" filterVisible="true"
-              queryListener="#{bindings.AppointmentSearchQuery1.processQuery}" varStatus="vs" id="resId1">
+              queryListener="#{bindings.AppointmentSearchQuery1.processQuery}" varStatus="vs" id="resId1"
+              partialTriggers="::b1">
       <af:column sortProperty="#{bindings.AppointmentVO31.hints.AppName.name}" filterable="true" sortable="true"
                  headerText="#{bindings.AppointmentVO31.hints.AppName.label}" id="resId1c1">
         <af:link shortDesc="#{bindings.AppointmentVO31.hints.AppName.tooltip}" id="ot1" text="#{row.AppName}"

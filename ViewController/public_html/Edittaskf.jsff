@@ -6,6 +6,11 @@
       <af:gridCell marginStart="5px" width="80%" id="gc1">
         <af:panelBox text="EDIT TASK" id="pb1">
           <f:facet name="toolbar"/>
+          <af:button actionListener="#{bindings.Commit.execute}" text="Save" disabled=""
+                     id="b1" action="back"/> <af:button actionListener="#{bindings.Rollback.execute}" text="Reset"
+                     disabled="" immediate="true" id="b2" action="back">
+            <af:resetActionListener/>
+          </af:button>
           <af:panelFormLayout id="pfl1">
             <af:panelFormLayout id="pfl2">
               <af:inputText value="#{bindings.TaskName1.inputValue}" label="#{bindings.TaskName1.hints.label}"
@@ -46,12 +51,8 @@
                 <af:convertNumber groupingUsed="false" pattern="#{bindings.PercentageCompletion1.format}"/>
               </af:inputText>
             </af:panelFormLayout>
-            <af:button actionListener="#{bindings.Commit.execute}"
-                       id="b1" action="back" icon="#{resource['images:icons8-save-24.png']}"/>
-            <af:button actionListener="#{bindings.Rollback.execute}" immediate="true" id="b2"
-                       icon="#{resource['images:icons8-cancel-24.png']}" action="back">
-              <af:resetActionListener/>
-            </af:button>
+            
+              
           </af:panelFormLayout>
         </af:panelBox>
       </af:gridCell>

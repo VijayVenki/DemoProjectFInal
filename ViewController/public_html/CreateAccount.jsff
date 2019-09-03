@@ -4,6 +4,12 @@
   <af:panelBox text="Create Account" id="pb1">
     <f:facet name="toolbar"/>
     <af:panelFormLayout id="pfl1">
+      <af:toolbar id="t1">
+        <af:button text="Save" id="b1" actionListener="#{bindings.Commit.execute}" action="back"/>
+        <af:button text="Reset" id="b2" actionListener="#{bindings.Rollback.execute}" immediate="true" action="back">
+          <af:resetActionListener/>
+        </af:button>
+      </af:toolbar>
       <af:inputText value="#{bindings.AccountName.inputValue}" label="#{bindings.AccountName.hints.label}"
                     required="#{bindings.AccountName.hints.mandatory}"
                     columns="#{bindings.AccountName.hints.displayWidth}"
@@ -81,10 +87,6 @@
       </af:inputComboboxListOfValues>
     </af:panelFormLayout>
   </af:panelBox>
-  <af:button id="b1" icon="#{resource['images:icons8-save-24.png']}" actionListener="#{bindings.Commit.execute}"
-             disabled="#{!bindings.Commit.enabled}" action="back"/>
-  <af:button actionListener="#{bindings.Rollback.execute}" disabled="#{!bindings.Rollback.enabled}"
-             immediate="true" id="b2" action="back" icon="#{resource['images:icons8-cancel-24.png']}">
-    <af:resetActionListener/>
-  </af:button>
+  
+   
 </ui:composition>

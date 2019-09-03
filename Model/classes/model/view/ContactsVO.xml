@@ -13,6 +13,27 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="CustomerAccountVO1"
+    ViewObjectName="model.view.CustomerAccountVO"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_AccountId"
+    ListVOName="CustomerAccountVO1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="AccountId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="AccountId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="AccountName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="ContactsEO"
     Entity="model.entities.ContactsEO"/>
@@ -67,13 +88,16 @@
     PrecisionRule="true"
     EntityAttrName="AccountId"
     EntityUsage="ContactsEO"
-    AliasName="ACCOUNT_ID">
+    AliasName="ACCOUNT_ID"
+    LOVName="LOV_AccountId">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
           ResId="model.view.ContactsVO.AccountId_LABEL"/>
         <DISPLAYWIDTH
           Value="30"/>
+        <CONTROLTYPE
+          Value="choice"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>

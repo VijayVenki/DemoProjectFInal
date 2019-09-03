@@ -2,6 +2,12 @@
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
   <af:panelFormLayout id="pfl1">
+    <af:toolbar id="t1">
+        <af:button text="Save" id="b1" actionListener="#{bindings.Commit.execute}" action="back"/>
+        <af:button text="Reset" id="b2" actionListener="#{bindings.Rollback.execute}" immediate="true" action="back">
+          <af:resetActionListener/>
+        </af:button>
+      </af:toolbar>
     <af:inputText value="#{bindings.ContactName.inputValue}" label="#{bindings.ContactName.hints.label}"
                   required="#{bindings.ContactName.hints.mandatory}"
                   columns="#{bindings.ContactName.hints.displayWidth}"
@@ -69,10 +75,6 @@
       <af:convertNumber groupingUsed="false" pattern="#{bindings.InfluenceLevel.format}"/>
     </af:inputText>
   </af:panelFormLayout>
-  <af:button actionListener="#{bindings.Commit.execute}" disabled="#{!bindings.Commit.enabled}" id="b1"
-             icon="/icons8-save-24.png" action="back"/>
-  <af:button actionListener="#{bindings.Rollback.execute}" disabled="#{!bindings.Rollback.enabled}"
-             immediate="true" id="b2" icon="/icons8-cancel-24.png">
-    <af:resetActionListener/>
-  </af:button>
+  
+   
 </ui:composition>

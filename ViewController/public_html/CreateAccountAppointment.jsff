@@ -4,6 +4,12 @@
   <af:panelBox text="CREATE APPOINTMENT" id="pb1">
     <f:facet name="toolbar"/>
     <af:panelFormLayout id="pfl1">
+      <af:toolbar id="t1">
+        <af:button text="Save" id="b1" actionListener="#{bindings.Commit.execute}" action="back"/>
+        <af:button text="Reset" id="b2" actionListener="#{bindings.Rollback.execute}" immediate="true" action="back">
+          <af:resetActionListener/>
+        </af:button>
+      </af:toolbar>
       <af:inputText value="#{bindings.AppName.inputValue}" label="#{bindings.AppName.hints.label}"
                     required="#{bindings.AppName.hints.mandatory}" columns="#{bindings.AppName.hints.displayWidth}"
                     maximumLength="#{bindings.AppName.hints.precision}" shortDesc="#{bindings.AppName.hints.tooltip}"
@@ -36,12 +42,6 @@
         <f:validator binding="#{bindings.Location.validator}"/>
       </af:inputText>
     </af:panelFormLayout>
-    <af:button actionListener="#{bindings.Commit.execute}" disabled=""
-                     id="b1" action="back" icon="#{resource['images:icons8-save-24.png']}"/>
-          <af:button actionListener="#{bindings.Rollback.execute}"
-                     disabled="" immediate="true" id="b2"
-                     icon="#{resource['images:icons8-cancel-24.png']}" action="back">
-            <af:resetActionListener/>
-          </af:button>
+    
   </af:panelBox>
 </ui:composition>

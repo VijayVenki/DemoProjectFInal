@@ -3,10 +3,10 @@
                 xmlns:f="http://java.sun.com/jsf/core">
   <af:panelGroupLayout layout="vertical" id="pgl1">
     <af:panelHeader text="Tasks" id ="ph1">
-      <af:button id="b1" icon="#{resource['images:icons8-create-24.png']}"
+       <af:button id="b1"
                  actionListener="#{bindings.CreateInsert.execute}" disabled="#{!bindings.CreateInsert.enabled}"
-                 action="create"/>
-      <af:button id="b2" icon="#{resource['images:icons8-back-26.png']}" action="back"/>
+                 action="create" text="Create"/>
+      <af:button id="b2" action="back" text="back"/>
       <af:query id="qryId1" headerText="Search" disclosed="true" value="#{bindings.TasksQuery1.queryDescriptor}"
                 model="#{bindings.TasksQuery1.queryModel}" queryListener="#{bindings.TasksQuery1.processQuery}"
                 queryOperationListener="#{bindings.TasksQuery1.processQueryOperation}" resultComponentId="::resId1"/>
