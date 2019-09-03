@@ -117,7 +117,7 @@
       <property
          name="fromOutcome">oppurtunity</property>
       <property
-         name="sdm:polyPoints">L50,40.463867,144.91406,-95.13965,261.23438,T50</property>
+         name="sdm:polyPoints">L54,40.463867,148.41406,-95.13965,261.23438,T50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"

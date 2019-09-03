@@ -1,8 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
                 xmlns:f="http://java.sun.com/jsf/core">
-  <af:panelBox text="CREATE OPPURTUNITY" id="pb1">
-    <f:facet name="toolbar"/>
+  <af:panelBox text="Create Oppurtunity" id="pb1" type="stretch">
+    <f:facet name="toolbar">
+      
+    </f:facet>
+    <af:button text="Save" id="id1" actionListener="#{bindings.Commit.execute}" disabled="#{!bindings.Commit.enabled}"
+                 action="back"/> <af:button actionListener="#{bindings.Rollback.execute}" text="Reset" disabled="#{!bindings.Rollback.enabled}"
+                 immediate="true" id="b1" action="back">
+        <af:resetActionListener/>
+      </af:button>
     <af:panelFormLayout id="pfl1">
       <af:inputText value="#{bindings.OppName.inputValue}" label="#{bindings.OppName.hints.label}"
                     required="#{bindings.OppName.hints.mandatory}" columns="#{bindings.OppName.hints.displayWidth}"
@@ -92,11 +99,5 @@
         <f:validator binding="#{bindings.OppDocument.validator}"/>
       </af:inputText>
     </af:panelFormLayout>
-    <af:button actionListener="#{bindings.Commit.execute}" disabled="#{!bindings.Commit.enabled}"
-               id="b1" icon="/icons8-save-24.png" action="back"/>
-    <af:button actionListener="#{bindings.Rollback.execute}" disabled="#{!bindings.Rollback.enabled}"
-               immediate="true" id="b2" icon="/icons8-cancel-24.png" action="back">
-      <af:resetActionListener/>
-    </af:button>
   </af:panelBox>
 </ui:composition>

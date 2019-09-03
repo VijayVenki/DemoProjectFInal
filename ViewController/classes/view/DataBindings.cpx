@@ -49,6 +49,7 @@
     <page path="/EditContact.jsff" usageId="view_EditContactPageDef"/>
     <page path="/Edittaskf.jsff" usageId="view_EdittaskfPageDef"/>
     <page path="/Run.jsf" usageId="view_RunPageDef"/>
+    <page path="/EditOppurtunityf.jsff" usageId="view_EditOppurtunityfPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_SearchPageDef" path="view.pageDefs.SearchPageDef"/>
@@ -92,6 +93,7 @@
     <page id="view_EditContactPageDef" path="view.pageDefs.EditContactPageDef"/>
     <page id="view_EdittaskfPageDef" path="view.pageDefs.EdittaskfPageDef"/>
     <page id="view_RunPageDef" path="view.pageDefs.RunPageDef"/>
+    <page id="view_EditOppurtunityfPageDef" path="view.pageDefs.EditOppurtunityfPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.entities"

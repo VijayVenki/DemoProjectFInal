@@ -5,6 +5,7 @@
   <executables>
     <variableIterator id="variables"/>
     <iterator Binds="OpportunitiesVO1" RangeSize="25" DataControl="AppModuleDataControl" id="OpportunitiesVO1Iterator"/>
+    <iterator Binds="OpportunitiesVO6" RangeSize="25" DataControl="AppModuleDataControl" id="OpportunitiesVO6Iterator"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="OpportunitiesVO1Iterator" id="OppName">
@@ -76,5 +77,67 @@
     </attributeValues>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
     <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+    <attributeValues IterBinding="OpportunitiesVO6Iterator" id="OppName1">
+      <AttrNames>
+        <Item Value="OppName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesVO6Iterator" id="WinProb1">
+      <AttrNames>
+        <Item Value="WinProb"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesVO6Iterator" id="CloseDate1">
+      <AttrNames>
+        <Item Value="CloseDate"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="OpportunitiesVO6Iterator" StaticList="false" Uses="LOV_PrimaryContact" id="PrimaryContact1"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="OpportunitiesVO6Iterator" id="SalesStage1">
+      <AttrNames>
+        <Item Value="SalesStage"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesVO6Iterator" id="SalesMeathod1">
+      <AttrNames>
+        <Item Value="SalesMeathod"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesVO6Iterator" id="SalesChannel1">
+      <AttrNames>
+        <Item Value="SalesChannel"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesVO6Iterator" id="Budgeted1">
+      <AttrNames>
+        <Item Value="Budgeted"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesVO6Iterator" id="BudgetAmount1">
+      <AttrNames>
+        <Item Value="BudgetAmount"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesVO6Iterator" id="EstimatedDuration1">
+      <AttrNames>
+        <Item Value="EstimatedDuration"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesVO6Iterator" id="RiskLevel1">
+      <AttrNames>
+        <Item Value="RiskLevel"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesVO6Iterator" id="DecisionLevel1">
+      <AttrNames>
+        <Item Value="DecisionLevel"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesVO6Iterator" id="OppDocument1">
+      <AttrNames>
+        <Item Value="OppDocument"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>
